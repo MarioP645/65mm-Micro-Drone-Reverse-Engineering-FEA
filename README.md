@@ -1,13 +1,13 @@
 # 65mm-Micro-Drone-Reverse-Engineering-FEA
 # 65mm Micro-Whoop Airframe: Reverse Engineering & FEA Material Optimization
 
-## 📌 Project Overview
+## Project Overview
 Standard 65mm micro-drone frames are injection-molded from **Polypropylene (PP) Homopolymer** for impact flexibility. However, excessive frame compliance under motor thrust introduces mid-air resonance, degrading flight controller PID loop performance. 
 
 This project reverse-engineers a 65mm ducted airframe from a reference mesh in **SolidWorks** to evaluate structural deflection under maximum static thrust and investigate a material upgrade to **3D-Printed Carbon Fiber Reinforced Nylon (PA-CF)**.
 
 
-## 🛠️ Methodology & Simulation Setup
+## Methodology & Simulation Setup
 
 ### 1. Reverse Engineering (CAD)
 * Reconstructed parametric solid geometry over a reference STL stencil using boss extrusions, circular patterns, and multi-body boolean operations (`Combine`).
@@ -30,7 +30,7 @@ Compared baseline factory thermoplastics against a custom-defined composite fila
 * **Mesh Parameters:** Blended curvature-based mesh (`1.5 mm` max, `0.3 mm` min) to resolve thin-wall strut geometry and bypass sharp-edge failures on the ducts.
 
 
-## 📊 Baseline Results & FEA Root-Cause Analysis
+## Baseline Results & FEA Root-Cause Analysis
 
 ### Model Validation & Anomaly Diagnosis
 In the initial baseline PP Homopolymer static study, the frame was analyzed for von Mises Stress distribution and overall displacement under load.
@@ -48,7 +48,7 @@ While inspecting the displacement plot, an asymmetrical deflection spike of **0.
 ![Boundary Error](error.png)
 
 
-## 🚀 Future Work & Physical Prototyping Roadmap (Post-Midterms)
-* [ ] **CAD Overlap Revision:** Refactor the master strut sketches to deeply penetrate the inner duct walls before executing the boolean `Combine`, ensuring 100% node merging across all four quadrants.
-* [ ] **PA-CF Comparative Study:** Execute the duplicated static study with the custom PA-CF material profile to quantify the exact percentage reduction in vertical duct deflection.
-* [ ] **FDM Manufacturing & Flight Testing:** Slice and 3D-print the revised airframe in PA-CF, transfer brushless motors and flight controller hardware, and compare Blackbox gyro noise logs against the stock PP frame.
+## Future Work & Physical Prototyping Roadmap 
+* **CAD Overlap Revision:** Refactor the master strut sketches to deeply penetrate the inner duct walls before executing the boolean `Combine`, ensuring 100% node merging across all four quadrants.
+* **PA-CF Comparative Study:** Execute the duplicated static study with the custom PA-CF material profile to quantify the exact percentage reduction in vertical duct deflection.
+*  **FDM Manufacturing & Flight Testing:** Slice and 3D-print the revised airframe in PA-CF, transfer brushless motors and flight controller hardware, and compare Blackbox gyro noise logs against the stock PP frame.
