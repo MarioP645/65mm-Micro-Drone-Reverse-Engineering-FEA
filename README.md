@@ -6,7 +6,6 @@ Standard 65mm micro-drone frames are injection-molded from **Polypropylene (PP) 
 
 This project reverse-engineers a 65mm ducted airframe from a reference mesh in **SolidWorks** to evaluate structural deflection under maximum static thrust and investigate a material upgrade to **3D-Printed Carbon Fiber Reinforced Nylon (PA-CF)**.
 
----
 
 ## 🛠️ Methodology & Simulation Setup
 
@@ -25,16 +24,11 @@ Compared baseline factory thermoplastics against a custom-defined composite fila
 | **Mass Density** | 900 kg/m³ | 1,150 kg/m³ |
 | **Yield Strength** | ~30 MPa | 65 MPa |
 
-*(If you renamed your material screenshot, place it here: `![PA-CF Material Properties](material.png)`)*
-
 ### 3. Boundary Conditions & Meshing
 * **Fixtures:** Fixed geometry applied to the central battery bay and lower flight controller standoff bases to simulate the aircraft's center of mass in a hover.
 * **External Loads:** `0.4 N` upward normal force applied *per item* across all four 3-pronged motor mounting pads (1.6 N total vertical thrust).
 * **Mesh Parameters:** Blended curvature-based mesh (`1.5 mm` max, `0.3 mm` min) to resolve thin-wall strut geometry and bypass sharp-edge failures on the ducts.
 
-*(If you renamed your mesh screenshot, place it here: `![Mesh Quality Plot](mesh.png)`)*
-
----
 
 ## 📊 Baseline Results & FEA Root-Cause Analysis
 
@@ -53,7 +47,6 @@ While inspecting the displacement plot, an asymmetrical deflection spike of **0.
 
 ![Boundary Error](error.png)
 
----
 
 ## 🚀 Future Work & Physical Prototyping Roadmap (Post-Midterms)
 * [ ] **CAD Overlap Revision:** Refactor the master strut sketches to deeply penetrate the inner duct walls before executing the boolean `Combine`, ensuring 100% node merging across all four quadrants.
